@@ -49,13 +49,13 @@ bool RFIDuino::decodeTag(unsigned char *buf)
         while(0==digitalRead(DEMOD_OUT))  //watch for DEMOD_OUT to go low
         {  
             
-            if(timeCount==TIMEOUT)  //if we pass TIMEOUT milliseconds, break out of the loop
+            if(timeCount>=TIMEOUT)  //if we pass TIMEOUT milliseconds, break out of the loop
                 break;
             else   
                 timeCount++;        
         }     
   
-        if (timeCount==600)           
+        if (timeCount>=600)           
              return false;  
         else   
                 timeCount=0;  
