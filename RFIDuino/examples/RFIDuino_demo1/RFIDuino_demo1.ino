@@ -42,7 +42,7 @@ RFIDuino myRFIDuino(1.1);     //initialize an RFIDuino object for hardware versi
 //RFIDuino myRFIDuino(1.2);       //initialize an RFIDuino object for hardware version 1.2
 
 //enter your ID numbers below as a 'key' tag
-byte keyTag[5] ={77,0,44,22,242};  //an array that will hold all of our 'key tags'. Key tags are treated differently from other tags read
+byte keyTag[5] ={0,0,0,0,0};  //an array that will hold all of our 'key tags'. Key tags are treated differently from other tags read
 
 byte tagData[5];                   //Holds the ID numbers from the tag
 boolean verifyKey = false;         //true when a verified tag has been determined to match the key tag, false otherwise

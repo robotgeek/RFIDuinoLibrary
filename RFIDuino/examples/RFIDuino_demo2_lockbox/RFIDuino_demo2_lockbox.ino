@@ -54,7 +54,7 @@ RFIDuino myRFIDuino(1.1);     //initialize an RFIDuino object for hardware versi
 #define   OPEN_TIME 1000         //the time (in milliseconds) that the solenoid will be activated for
 
 byte tagData[5];                   //Holds the ID numbers from the tag
-byte keyTag[5] ={77,0,44,22,242};  //an array that will hold all of our 'key tags'. Key tags are treated differently from other tags read
+byte keyTag[5] ={0,0,0,0,0};  //an array that will hold all of our 'key tags'. Key tags are treated differently from other tags read
 boolean verifyKey = false;         //true when a verified tag has been determined to match the key tag, false otherwise
   
 void setup()

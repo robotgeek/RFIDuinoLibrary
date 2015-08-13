@@ -55,16 +55,15 @@ RFIDuino myRFIDuino(1.1);     //initialize an RFIDuino object for hardware versi
 //Define the pins for our outputs
 #define   RELAY 9               //the Buzzer on the RFIDuino shield
 #define   OPEN_TIME 1000        //the time (in milliseconds) that the solenoid will be activated for
-#define   NUMBER_OF_CARDS 5     //total numer of key cards that the system will respond to.   
+#define   NUMBER_OF_CARDS 4     //total numer of key cards that the system will respond to.   
 
 byte tagData[5];                   //Holds the ID numbers from the tag
 
 byte keyTag[NUMBER_OF_CARDS][5] ={
-{2,13,30,0,180},  //Tag 1 //commenting each tag with a description can help you keep track of them
-{1,12,59,62,48},  //Tag 2
-{2,13,29,233,78}, //Tag 3
-{2,13,29,208,140},//Tag 4
-{2,13,29,221,53}, //Tag 5
+{0,0,0,0,0},  //Tag 1 //commenting each tag with a description can help you keep track of them
+{0,0,0,0,0},  //Tag 2
+{0,0,0,0,0}, //Tag 3
+{0,0,0,0,0},//Tag 4
 };  
 
 boolean verifyKey = false;         //true when a verified tag has been determined to match the key tag, false otherwise
